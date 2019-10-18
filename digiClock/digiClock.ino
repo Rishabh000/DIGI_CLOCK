@@ -1,6 +1,6 @@
 #include<LiquidCrystal.h>      
 int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3 , d7 = 2;
-int h, m ,s;
+int i, j ,k;
 
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
@@ -19,30 +19,30 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  for(h = 0; h < 24; h++){
+  for(i = 0; i < 24; i++){
     
-    for(m= 0; m < 60; m++){
+    for(j= 0; j < 60; j++){
       lcd.setCursor(5,0);
-      lcd.print("HH MM SS");
+      lcd.print("II JJ KK");
       lcd.setCursor(5,1);
-      if(h < 10){
+      if(i < 10){
       
       lcd.print(0);
       }
       
       
-      lcd.print(h);
+      lcd.print(i);
       lcd.setCursor(8,1);
-      if(m<10){
+      if(j<10){
         lcd.print(0);
       }
-      lcd.print(m);
-      for(s= 0; s < 60; s++){
+      lcd.print(j);
+      for(k= 0; k < 60; k++){
        
         lcd.setCursor(11,1);
-        if(s < 10)
+        if(k < 10)
         lcd.print(0);
-        lcd.print(s);
+        lcd.print(k);
         delay(1000);
        
       }
